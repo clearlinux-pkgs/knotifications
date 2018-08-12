@@ -8,6 +8,8 @@ libQt5Gui.so.5
 libQt5TextToSpeech.so.5
 libQt5Widgets.so.5
 libQt5X11Extras.so.5
+libX11.so.6
+libXtst.so.6
 libc.so.6
 libphonon4qt5.so.4
 libstdc++.so.6
