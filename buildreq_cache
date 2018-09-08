@@ -1,5 +1,6 @@
 5.50.0
 kcodecs-dev
 kwindowsystem-dev
+libdbusmenu-dev
 phonon-dev
 qtx11extras-dev
