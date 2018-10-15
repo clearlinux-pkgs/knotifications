@@ -5,28 +5,24 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : knotifications
-Version  : 5.50.0
-Release  : 4
-URL      : https://download.kde.org/stable/frameworks/5.50/knotifications-5.50.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.50/knotifications-5.50.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.50/knotifications-5.50.0.tar.xz.sig
+Version  : 5.51.0
+Release  : 5
+URL      : https://download.kde.org/stable/frameworks/5.51/knotifications-5.51.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.51/knotifications-5.51.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.51/knotifications-5.51.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause LGPL-2.1
-Requires: knotifications-lib
-Requires: knotifications-data
-Requires: knotifications-license
+Requires: knotifications-data = %{version}-%{release}
+Requires: knotifications-lib = %{version}-%{release}
+Requires: knotifications-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
-BuildRequires : kcodecs-dev
-BuildRequires : kwindowsystem-dev
 BuildRequires : libX11-dev libICE-dev libSM-dev libXau-dev libXcomposite-dev libXcursor-dev libXdamage-dev libXdmcp-dev libXext-dev libXfixes-dev libXft-dev libXi-dev libXinerama-dev libXi-dev libXmu-dev libXpm-dev libXrandr-dev libXrender-dev libXres-dev libXScrnSaver-dev libXt-dev libXtst-dev libXv-dev libXxf86misc-dev libXxf86vm-dev
 BuildRequires : libdbusmenu-dev
-BuildRequires : phonon-dev
 BuildRequires : pkg-config
 BuildRequires : pkgconfig(libcanberra)
-BuildRequires : qtbase-dev qtbase-extras mesa-dev
-BuildRequires : qtx11extras-dev
+BuildRequires : qtbase-dev mesa-dev
 
 %description
 # KNotification
@@ -46,9 +42,9 @@ data components for the knotifications package.
 %package dev
 Summary: dev components for the knotifications package.
 Group: Development
-Requires: knotifications-lib
-Requires: knotifications-data
-Provides: knotifications-devel
+Requires: knotifications-lib = %{version}-%{release}
+Requires: knotifications-data = %{version}-%{release}
+Provides: knotifications-devel = %{version}-%{release}
 
 %description dev
 dev components for the knotifications package.
@@ -57,8 +53,8 @@ dev components for the knotifications package.
 %package lib
 Summary: lib components for the knotifications package.
 Group: Libraries
-Requires: knotifications-data
-Requires: knotifications-license
+Requires: knotifications-data = %{version}-%{release}
+Requires: knotifications-license = %{version}-%{release}
 
 %description lib
 lib components for the knotifications package.
@@ -73,26 +69,26 @@ license components for the knotifications package.
 
 
 %prep
-%setup -q -n knotifications-5.50.0
+%setup -q -n knotifications-5.51.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536434787
-mkdir clr-build
+export SOURCE_DATE_EPOCH=1539639129
+mkdir -p clr-build
 pushd clr-build
 %cmake ..
-make  %{?_smp_mflags}
+make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1536434787
+export SOURCE_DATE_EPOCH=1539639129
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/knotifications
-cp COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/doc/knotifications/COPYING-CMAKE-SCRIPTS
-cp COPYING.LIB %{buildroot}/usr/share/doc/knotifications/COPYING.LIB
+mkdir -p %{buildroot}/usr/share/package-licenses/knotifications
+cp COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/knotifications/COPYING-CMAKE-SCRIPTS
+cp COPYING.LIB %{buildroot}/usr/share/package-licenses/knotifications/COPYING.LIB
 pushd clr-build
 %make_install
 popd
@@ -232,9 +228,9 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Notifications.so.5
-/usr/lib64/libKF5Notifications.so.5.50.0
+/usr/lib64/libKF5Notifications.so.5.51.0
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/knotifications/COPYING-CMAKE-SCRIPTS
-/usr/share/doc/knotifications/COPYING.LIB
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/knotifications/COPYING-CMAKE-SCRIPTS
+/usr/share/package-licenses/knotifications/COPYING.LIB
