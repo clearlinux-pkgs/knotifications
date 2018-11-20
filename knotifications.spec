@@ -6,7 +6,7 @@
 #
 Name     : knotifications
 Version  : 5.52.0
-Release  : 6
+Release  : 7
 URL      : https://download.kde.org/stable/frameworks/5.52/knotifications-5.52.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.52/knotifications-5.52.0.tar.xz
 Source99 : https://download.kde.org/stable/frameworks/5.52/knotifications-5.52.0.tar.xz.sig
@@ -18,11 +18,15 @@ Requires: knotifications-lib = %{version}-%{release}
 Requires: knotifications-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
+BuildRequires : kcodecs-dev
+BuildRequires : kwindowsystem-dev
 BuildRequires : libX11-dev libICE-dev libSM-dev libXau-dev libXcomposite-dev libXcursor-dev libXdamage-dev libXdmcp-dev libXext-dev libXfixes-dev libXft-dev libXi-dev libXinerama-dev libXi-dev libXmu-dev libXpm-dev libXrandr-dev libXrender-dev libXres-dev libXScrnSaver-dev libXt-dev libXtst-dev libXv-dev libXxf86misc-dev libXxf86vm-dev
 BuildRequires : libdbusmenu-dev
+BuildRequires : phonon-dev
 BuildRequires : pkg-config
 BuildRequires : pkgconfig(libcanberra)
 BuildRequires : qtbase-dev mesa-dev
+BuildRequires : qtx11extras-dev
 
 %description
 # KNotification
@@ -30,14 +34,6 @@ Desktop notifications
 ## Introduction
 KNotification is used to notify the user of an event. It covers feedback and
 persistent events.
-
-%package abi
-Summary: abi components for the knotifications package.
-Group: Default
-
-%description abi
-abi components for the knotifications package.
-
 
 %package data
 Summary: data components for the knotifications package.
@@ -84,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541871160
+export SOURCE_DATE_EPOCH=1542743529
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -92,7 +88,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1541871160
+export SOURCE_DATE_EPOCH=1542743529
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/knotifications
 cp COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/knotifications/COPYING-CMAKE-SCRIPTS
@@ -103,10 +99,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-
-%files abi
-%defattr(-,root,root,-)
-/usr/share/abi/libKF5Notifications.so.5.52.0.abi
 
 %files data
 %defattr(-,root,root,-)
