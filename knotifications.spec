@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : knotifications
-Version  : 5.63.0
-Release  : 22
-URL      : https://download.kde.org/stable/frameworks/5.63/knotifications-5.63.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.63/knotifications-5.63.0.tar.xz
-Source1 : https://download.kde.org/stable/frameworks/5.63/knotifications-5.63.0.tar.xz.sig
+Version  : 5.64.0
+Release  : 23
+URL      : https://download.kde.org/stable/frameworks/5.64/knotifications-5.64.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.64/knotifications-5.64.0.tar.xz
+Source1 : https://download.kde.org/stable/frameworks/5.64/knotifications-5.64.0.tar.xz.sig
 Summary  : Abstraction for system notifications
 Group    : Development/Tools
 License  : BSD-3-Clause LGPL-2.1
@@ -72,14 +72,14 @@ license components for the knotifications package.
 
 
 %prep
-%setup -q -n knotifications-5.63.0
+%setup -q -n knotifications-5.64.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570930312
+export SOURCE_DATE_EPOCH=1573402273
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -96,11 +96,11 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1570930312
+export SOURCE_DATE_EPOCH=1573402273
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/knotifications
-cp COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/knotifications/COPYING-CMAKE-SCRIPTS
-cp COPYING.LIB %{buildroot}/usr/share/package-licenses/knotifications/COPYING.LIB
+cp %{_builddir}/knotifications-5.64.0/COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/knotifications/ff3ed70db4739b3c6747c7f624fe2bad70802987
+cp %{_builddir}/knotifications-5.64.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/knotifications/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 pushd clr-build
 %make_install
 popd
@@ -241,9 +241,9 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Notifications.so.5
-/usr/lib64/libKF5Notifications.so.5.63.0
+/usr/lib64/libKF5Notifications.so.5.64.0
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/knotifications/COPYING-CMAKE-SCRIPTS
-/usr/share/package-licenses/knotifications/COPYING.LIB
+/usr/share/package-licenses/knotifications/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+/usr/share/package-licenses/knotifications/ff3ed70db4739b3c6747c7f624fe2bad70802987
