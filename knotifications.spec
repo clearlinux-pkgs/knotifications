@@ -6,7 +6,7 @@
 #
 Name     : knotifications
 Version  : 5.67.0
-Release  : 26
+Release  : 27
 URL      : https://download.kde.org/stable/frameworks/5.67/knotifications-5.67.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.67/knotifications-5.67.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/5.67/knotifications-5.67.0.tar.xz.sig
@@ -18,8 +18,6 @@ Requires: knotifications-lib = %{version}-%{release}
 Requires: knotifications-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
-BuildRequires : buildreq-mvn
-BuildRequires : gradle
 BuildRequires : libX11-dev libICE-dev libSM-dev libXau-dev libXcomposite-dev libXcursor-dev libXdamage-dev libXdmcp-dev libXext-dev libXfixes-dev libXft-dev libXi-dev libXinerama-dev libXi-dev libXmu-dev libXpm-dev libXrandr-dev libXrender-dev libXres-dev libXScrnSaver-dev libXt-dev libXtst-dev libXv-dev libXxf86misc-dev libXxf86vm-dev
 BuildRequires : libcanberra-dev
 BuildRequires : pkgconfig(dbusmenu-qt5)
@@ -46,7 +44,6 @@ Group: Development
 Requires: knotifications-lib = %{version}-%{release}
 Requires: knotifications-data = %{version}-%{release}
 Provides: knotifications-devel = %{version}-%{release}
-Requires: knotifications = %{version}-%{release}
 Requires: knotifications = %{version}-%{release}
 
 %description dev
@@ -80,10 +77,9 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581304908
+export SOURCE_DATE_EPOCH=1582930321
 mkdir -p clr-build
 pushd clr-build
-# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -97,7 +93,7 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1581304908
+export SOURCE_DATE_EPOCH=1582930321
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/knotifications
 cp %{_builddir}/knotifications-5.67.0/COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/knotifications/ff3ed70db4739b3c6747c7f624fe2bad70802987
