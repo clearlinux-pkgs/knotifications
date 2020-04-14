@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : knotifications
-Version  : 5.68.0
-Release  : 28
-URL      : https://download.kde.org/stable/frameworks/5.68/knotifications-5.68.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.68/knotifications-5.68.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.68/knotifications-5.68.0.tar.xz.sig
+Version  : 5.69.0
+Release  : 29
+URL      : https://download.kde.org/stable/frameworks/5.69/knotifications-5.69.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.69/knotifications-5.69.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.69/knotifications-5.69.0.tar.xz.sig
 Summary  : Abstraction for system notifications
 Group    : Development/Tools
 License  : BSD-3-Clause LGPL-2.1
@@ -70,15 +70,15 @@ license components for the knotifications package.
 
 
 %prep
-%setup -q -n knotifications-5.68.0
-cd %{_builddir}/knotifications-5.68.0
+%setup -q -n knotifications-5.69.0
+cd %{_builddir}/knotifications-5.69.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1584314651
+export SOURCE_DATE_EPOCH=1586894209
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -95,11 +95,11 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1584314651
+export SOURCE_DATE_EPOCH=1586894209
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/knotifications
-cp %{_builddir}/knotifications-5.68.0/COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/knotifications/ff3ed70db4739b3c6747c7f624fe2bad70802987
-cp %{_builddir}/knotifications-5.68.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/knotifications/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/knotifications-5.69.0/COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/knotifications/ff3ed70db4739b3c6747c7f624fe2bad70802987
+cp %{_builddir}/knotifications-5.69.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/knotifications/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 pushd clr-build
 %make_install
 popd
@@ -217,12 +217,14 @@ popd
 %files dev
 %defattr(-,root,root,-)
 /usr/include/KF5/KNotifications/KNotification
+/usr/include/KF5/KNotifications/KNotificationJobUiDelegate
 /usr/include/KF5/KNotifications/KNotificationPlugin
 /usr/include/KF5/KNotifications/KNotificationRestrictions
 /usr/include/KF5/KNotifications/KNotifyConfig
 /usr/include/KF5/KNotifications/KPassivePopup
 /usr/include/KF5/KNotifications/KStatusNotifierItem
 /usr/include/KF5/KNotifications/knotification.h
+/usr/include/KF5/KNotifications/knotificationjobuidelegate.h
 /usr/include/KF5/KNotifications/knotificationplugin.h
 /usr/include/KF5/KNotifications/knotificationrestrictions.h
 /usr/include/KF5/KNotifications/knotifications_export.h
@@ -240,7 +242,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Notifications.so.5
-/usr/lib64/libKF5Notifications.so.5.68.0
+/usr/lib64/libKF5Notifications.so.5.69.0
 
 %files license
 %defattr(0644,root,root,0755)
