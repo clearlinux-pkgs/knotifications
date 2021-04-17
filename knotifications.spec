@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : knotifications
-Version  : 5.78.0
-Release  : 38
-URL      : https://download.kde.org/stable/frameworks/5.78/knotifications-5.78.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.78/knotifications-5.78.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.78/knotifications-5.78.0.tar.xz.sig
+Version  : 5.81.0
+Release  : 39
+URL      : https://download.kde.org/stable/frameworks/5.81/knotifications-5.81.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.81/knotifications-5.81.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.81/knotifications-5.81.0.tar.xz.sig
 Summary  : Abstraction for system notifications
 Group    : Development/Tools
 License  : BSD-3-Clause LGPL-2.0 LGPL-2.1 LGPL-3.0
@@ -76,15 +76,15 @@ license components for the knotifications package.
 
 
 %prep
-%setup -q -n knotifications-5.78.0
-cd %{_builddir}/knotifications-5.78.0
+%setup -q -n knotifications-5.81.0
+cd %{_builddir}/knotifications-5.81.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1611178436
+export SOURCE_DATE_EPOCH=1618623213
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -100,16 +100,16 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1611178436
+export SOURCE_DATE_EPOCH=1618623213
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/knotifications
-cp %{_builddir}/knotifications-5.78.0/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/knotifications/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
-cp %{_builddir}/knotifications-5.78.0/LICENSES/LGPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/knotifications/20079e8f79713dce80ab09774505773c926afa2a
-cp %{_builddir}/knotifications-5.78.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/knotifications/20079e8f79713dce80ab09774505773c926afa2a
-cp %{_builddir}/knotifications-5.78.0/LICENSES/LGPL-2.1-only.txt %{buildroot}/usr/share/package-licenses/knotifications/3c3d7573e137d48253731c975ecf90d74cfa9efe
-cp %{_builddir}/knotifications-5.78.0/LICENSES/LGPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/knotifications/757b86330df80f81143d5916b3e92b4bcb1b1890
-cp %{_builddir}/knotifications-5.78.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/knotifications/e458941548e0864907e654fa2e192844ae90fc32
-cp %{_builddir}/knotifications-5.78.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/knotifications/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/knotifications-5.81.0/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/knotifications/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
+cp %{_builddir}/knotifications-5.81.0/LICENSES/LGPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/knotifications/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/knotifications-5.81.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/knotifications/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/knotifications-5.81.0/LICENSES/LGPL-2.1-only.txt %{buildroot}/usr/share/package-licenses/knotifications/3c3d7573e137d48253731c975ecf90d74cfa9efe
+cp %{_builddir}/knotifications-5.81.0/LICENSES/LGPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/knotifications/757b86330df80f81143d5916b3e92b4bcb1b1890
+cp %{_builddir}/knotifications-5.81.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/knotifications/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/knotifications-5.81.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/knotifications/e458941548e0864907e654fa2e192844ae90fc32
 pushd clr-build
 %make_install
 popd
@@ -231,6 +231,7 @@ popd
 /usr/include/KF5/KNotifications/KNotification
 /usr/include/KF5/KNotifications/KNotificationJobUiDelegate
 /usr/include/KF5/KNotifications/KNotificationPlugin
+/usr/include/KF5/KNotifications/KNotificationReplyAction
 /usr/include/KF5/KNotifications/KNotificationRestrictions
 /usr/include/KF5/KNotifications/KNotifyConfig
 /usr/include/KF5/KNotifications/KPassivePopup
@@ -238,6 +239,7 @@ popd
 /usr/include/KF5/KNotifications/knotification.h
 /usr/include/KF5/KNotifications/knotificationjobuidelegate.h
 /usr/include/KF5/KNotifications/knotificationplugin.h
+/usr/include/KF5/KNotifications/knotificationreplyaction.h
 /usr/include/KF5/KNotifications/knotificationrestrictions.h
 /usr/include/KF5/KNotifications/knotifications_export.h
 /usr/include/KF5/KNotifications/knotifyconfig.h
@@ -254,7 +256,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Notifications.so.5
-/usr/lib64/libKF5Notifications.so.5.78.0
+/usr/lib64/libKF5Notifications.so.5.81.0
 
 %files license
 %defattr(0644,root,root,0755)
