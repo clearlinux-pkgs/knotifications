@@ -1,5 +1,5 @@
 PKG_NAME := knotifications
-URL = https://download.kde.org/stable/frameworks/5.99/knotifications-5.99.0.tar.xz
+URL = https://download.kde.org/stable/frameworks/5.100/knotifications-5.100.0.tar.xz
 ARCHIVES = 
 
 include ../common/Makefile.common
