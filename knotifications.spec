@@ -7,7 +7,7 @@
 #
 Name     : knotifications
 Version  : 5.106.0
-Release  : 64
+Release  : 65
 URL      : https://download.kde.org/stable/frameworks/5.106/knotifications-5.106.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.106/knotifications-5.106.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/5.106/knotifications-5.106.0.tar.xz.sig
@@ -87,7 +87,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684813493
+export SOURCE_DATE_EPOCH=1685590870
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -120,7 +120,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1684813493
+export SOURCE_DATE_EPOCH=1685590870
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/knotifications
 cp %{_builddir}/knotifications-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/knotifications/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c || :
@@ -253,7 +253,6 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/libKF5Notifications.so
 /usr/include/KF5/KNotifications/KNotification
 /usr/include/KF5/KNotifications/KNotificationJobUiDelegate
 /usr/include/KF5/KNotifications/KNotificationPlugin
@@ -281,7 +280,6 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libKF5Notifications.so.5
 /V3/usr/lib64/libKF5Notifications.so.5.106.0
 /V3/usr/lib64/qt5/qml/org/kde/notification/libknotificationqmlplugin.so
 /usr/lib64/libKF5Notifications.so.5
