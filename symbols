@@ -1,129 +1,40 @@
-libKF6Notifications.so.6:KNotification::setEventId(QString const&)
-libKF6Notifications.so.6:KNotification::setUrgency(KNotification::Urgency)
-libKF6Notifications.so.6:KNotification::qt_metacall(QMetaObject::Call, int, void**)
-libKF6Notifications.so.6:KNotification::qt_metacast(char const*)
-libKF6Notifications.so.6:KNotification::setIconName(QString const&)
-libKF6Notifications.so.6:KNotification::textChanged()
-libKF6Notifications.so.6:KNotification::urlsChanged()
-libKF6Notifications.so.6:KNotification::clearActions()
-libKF6Notifications.so.6:KNotification::flagsChanged()
-libKF6Notifications.so.6:KNotification::hintsChanged()
-libKF6Notifications.so.6:KNotification::titleChanged()
-libKF6Notifications.so.6:KNotification::setActionsQml(QList<KNotificationAction*>)
-libKF6Notifications.so.6:KNotification::setAutoDelete(bool)
 libKF6Notifications.so.6:KNotification::actionsChanged()
-libKF6Notifications.so.6:KNotification::eventIdChanged()
-libKF6Notifications.so.6:KNotification::setReplyAction(std::unique_ptr<KNotificationReplyAction, std::default_delete<KNotificationReplyAction> >)
-libKF6Notifications.so.6:KNotification::urgencyChanged()
-libKF6Notifications.so.6:KNotification::iconNameChanged()
-libKF6Notifications.so.6:KNotification::addDefaultAction(QString const&)
-libKF6Notifications.so.6:KNotification::setComponentName(QString const&)
 libKF6Notifications.so.6:KNotification::autoDeleteChanged()
-libKF6Notifications.so.6:KNotification::setDefaultActionQml(KNotificationAction*)
+libKF6Notifications.so.6:KNotification::clearActions()
+libKF6Notifications.so.6:KNotification::close()
+libKF6Notifications.so.6:KNotification::closed()
 libKF6Notifications.so.6:KNotification::componentNameChanged()
 libKF6Notifications.so.6:KNotification::defaultActionChanged()
+libKF6Notifications.so.6:KNotification::eventIdChanged()
+libKF6Notifications.so.6:KNotification::flagsChanged()
+libKF6Notifications.so.6:KNotification::hintsChanged()
+libKF6Notifications.so.6:KNotification::iconNameChanged()
+libKF6Notifications.so.6:KNotification::ignored()
+libKF6Notifications.so.6:KNotification::sendEvent()
+libKF6Notifications.so.6:KNotification::setActionsQml(QList<KNotificationAction*>)
+libKF6Notifications.so.6:KNotification::setAutoDelete(bool)
+libKF6Notifications.so.6:KNotification::setDefaultActionQml(KNotificationAction*)
+libKF6Notifications.so.6:KNotification::setUrgency(KNotification::Urgency)
+libKF6Notifications.so.6:KNotification::setWindow(QWindow*)
 libKF6Notifications.so.6:KNotification::standardEventToEventId(KNotification::StandardEvent)
 libKF6Notifications.so.6:KNotification::standardEventToIconName(KNotification::StandardEvent)
+libKF6Notifications.so.6:KNotification::textChanged()
+libKF6Notifications.so.6:KNotification::titleChanged()
+libKF6Notifications.so.6:KNotification::urgencyChanged()
+libKF6Notifications.so.6:KNotification::urlsChanged()
 libKF6Notifications.so.6:KNotification::xdgActivationTokenChanged()
-libKF6Notifications.so.6:KNotification::beep(QString const&)
-libKF6Notifications.so.6:KNotification::close()
-libKF6Notifications.so.6:KNotification::event(KNotification::StandardEvent, QString const&, QPixmap const&, QFlags<KNotification::NotificationFlag> const&)
-libKF6Notifications.so.6:KNotification::event(KNotification::StandardEvent, QString const&, QString const&, QFlags<KNotification::NotificationFlag> const&)
-libKF6Notifications.so.6:KNotification::event(KNotification::StandardEvent, QString const&, QString const&, QPixmap const&, QFlags<KNotification::NotificationFlag> const&)
-libKF6Notifications.so.6:KNotification::event(KNotification::StandardEvent, QString const&, QString const&, QString const&, QFlags<KNotification::NotificationFlag> const&)
-libKF6Notifications.so.6:KNotification::event(QString const&, QString const&, QPixmap const&, QFlags<KNotification::NotificationFlag> const&, QString const&)
-libKF6Notifications.so.6:KNotification::event(QString const&, QString const&, QString const&, QPixmap const&, QFlags<KNotification::NotificationFlag> const&, QString const&)
-libKF6Notifications.so.6:KNotification::event(QString const&, QString const&, QString const&, QString const&, QFlags<KNotification::NotificationFlag> const&, QString const&)
-libKF6Notifications.so.6:KNotification::closed()
-libKF6Notifications.so.6:KNotification::ignored()
-libKF6Notifications.so.6:KNotification::setHint(QString const&, QVariant const&)
-libKF6Notifications.so.6:KNotification::setText(QString const&)
-libKF6Notifications.so.6:KNotification::setUrls(QList<QUrl> const&)
-libKF6Notifications.so.6:KNotification::setFlags(QFlags<KNotification::NotificationFlag> const&)
-libKF6Notifications.so.6:KNotification::setHints(QMap<QString, QVariant> const&)
-libKF6Notifications.so.6:KNotification::setTitle(QString const&)
-libKF6Notifications.so.6:KNotification::addAction(QString const&)
-libKF6Notifications.so.6:KNotification::sendEvent()
-libKF6Notifications.so.6:KNotification::setPixmap(QPixmap const&)
-libKF6Notifications.so.6:KNotification::setWindow(QWindow*)
-libKF6Notifications.so.6:KNotification::KNotification(QString const&, QFlags<KNotification::NotificationFlag>, QObject*)
-libKF6Notifications.so.6:KNotification::KNotification(QString const&, QFlags<KNotification::NotificationFlag>, QObject*)
 libKF6Notifications.so.6:KNotification::~KNotification()
-libKF6Notifications.so.6:KNotification::~KNotification()
-libKF6Notifications.so.6:KNotification::~KNotification()
-libKF6Notifications.so.6:KNotifyConfig::reparseConfiguration()
-libKF6Notifications.so.6:KNotifyConfig::reparseSingleConfiguration(QString const&)
-libKF6Notifications.so.6:KNotifyConfig::KNotifyConfig(QString const&, QString const&)
-libKF6Notifications.so.6:KNotifyConfig::KNotifyConfig(KNotifyConfig const&)
-libKF6Notifications.so.6:KNotifyConfig::KNotifyConfig(QString const&, QString const&)
-libKF6Notifications.so.6:KNotifyConfig::KNotifyConfig(KNotifyConfig const&)
-libKF6Notifications.so.6:KNotifyConfig::~KNotifyConfig()
-libKF6Notifications.so.6:KNotifyConfig::~KNotifyConfig()
-libKF6Notifications.so.6:KNotifyConfig::operator=(KNotifyConfig const&)
-libKF6Notifications.so.6:KNotificationAction::qt_metacall(QMetaObject::Call, int, void**)
-libKF6Notifications.so.6:KNotificationAction::qt_metacast(char const*)
-libKF6Notifications.so.6:KNotificationAction::labelChanged(QString const&)
-libKF6Notifications.so.6:KNotificationAction::setId(QString const&)
-libKF6Notifications.so.6:KNotificationAction::setLabel(QString const&)
+libKF6Notifications.so.6:KNotificationAction::KNotificationAction(QObject*)
 libKF6Notifications.so.6:KNotificationAction::activated()
-libKF6Notifications.so.6:KNotificationAction::KNotificationAction(QObject*)
-libKF6Notifications.so.6:KNotificationAction::KNotificationAction(QString const&)
-libKF6Notifications.so.6:KNotificationAction::KNotificationAction(QObject*)
-libKF6Notifications.so.6:KNotificationAction::KNotificationAction(QString const&)
-libKF6Notifications.so.6:KNotificationAction::~KNotificationAction()
-libKF6Notifications.so.6:KNotificationAction::~KNotificationAction()
 libKF6Notifications.so.6:KNotificationAction::~KNotificationAction()
 libKF6Notifications.so.6:KNotificationPermission::checkPermission()
-libKF6Notifications.so.6:KNotificationPermission::requestPermission(QObject*, std::function<void (Qt::PermissionStatus)> const&)
-libKF6Notifications.so.6:KNotificationReplyAction::qt_metacall(QMetaObject::Call, int, void**)
-libKF6Notifications.so.6:KNotificationReplyAction::qt_metacast(char const*)
-libKF6Notifications.so.6:KNotificationReplyAction::labelChanged()
-libKF6Notifications.so.6:KNotificationReplyAction::setPlaceholderText(QString const&)
-libKF6Notifications.so.6:KNotificationReplyAction::setFallbackBehavior(KNotificationReplyAction::FallbackBehavior)
-libKF6Notifications.so.6:KNotificationReplyAction::setSubmitButtonText(QString const&)
-libKF6Notifications.so.6:KNotificationReplyAction::placeholderTextChanged()
-libKF6Notifications.so.6:KNotificationReplyAction::fallbackBehaviorChanged()
-libKF6Notifications.so.6:KNotificationReplyAction::setSubmitButtonIconName(QString const&)
-libKF6Notifications.so.6:KNotificationReplyAction::submitButtonTextChanged()
-libKF6Notifications.so.6:KNotificationReplyAction::submitButtonIconNameChanged()
-libKF6Notifications.so.6:KNotificationReplyAction::replied(QString const&)
-libKF6Notifications.so.6:KNotificationReplyAction::setLabel(QString const&)
 libKF6Notifications.so.6:KNotificationReplyAction::activated()
-libKF6Notifications.so.6:KNotificationReplyAction::KNotificationReplyAction(QString const&)
-libKF6Notifications.so.6:KNotificationReplyAction::KNotificationReplyAction(QString const&)
+libKF6Notifications.so.6:KNotificationReplyAction::fallbackBehaviorChanged()
+libKF6Notifications.so.6:KNotificationReplyAction::labelChanged()
+libKF6Notifications.so.6:KNotificationReplyAction::placeholderTextChanged()
+libKF6Notifications.so.6:KNotificationReplyAction::setFallbackBehavior(KNotificationReplyAction::FallbackBehavior)
+libKF6Notifications.so.6:KNotificationReplyAction::submitButtonIconNameChanged()
+libKF6Notifications.so.6:KNotificationReplyAction::submitButtonTextChanged()
 libKF6Notifications.so.6:KNotificationReplyAction::~KNotificationReplyAction()
-libKF6Notifications.so.6:KNotificationReplyAction::~KNotificationReplyAction()
-libKF6Notifications.so.6:KNotificationReplyAction::~KNotificationReplyAction()
-libKF6Notifications.so.6:KNotification::metaObject() const
-libKF6Notifications.so.6:KNotification::replyAction() const
-libKF6Notifications.so.6:KNotification::isAutoDelete() const
-libKF6Notifications.so.6:KNotification::componentName() const
-libKF6Notifications.so.6:KNotification::defaultAction() const
-libKF6Notifications.so.6:KNotification::xdgActivationToken() const
-libKF6Notifications.so.6:KNotification::text() const
-libKF6Notifications.so.6:KNotification::urls() const
-libKF6Notifications.so.6:KNotification::flags() const
-libKF6Notifications.so.6:KNotification::hints() const
-libKF6Notifications.so.6:KNotification::title() const
-libKF6Notifications.so.6:KNotification::pixmap() const
-libKF6Notifications.so.6:KNotification::window() const
-libKF6Notifications.so.6:KNotification::actions() const
-libKF6Notifications.so.6:KNotification::appName() const
-libKF6Notifications.so.6:KNotification::eventId() const
-libKF6Notifications.so.6:KNotification::urgency() const
-libKF6Notifications.so.6:KNotification::iconName() const
-libKF6Notifications.so.6:KNotifyConfig::readPathEntry(QString const&) const
-libKF6Notifications.so.6:KNotifyConfig::applicationName() const
-libKF6Notifications.so.6:KNotifyConfig::readGlobalEntry(QString const&) const
-libKF6Notifications.so.6:KNotifyConfig::eventId() const
-libKF6Notifications.so.6:KNotifyConfig::isValid() const
-libKF6Notifications.so.6:KNotifyConfig::readEntry(QString const&) const
-libKF6Notifications.so.6:KNotificationAction::metaObject() const
-libKF6Notifications.so.6:KNotificationAction::id() const
-libKF6Notifications.so.6:KNotificationAction::label() const
-libKF6Notifications.so.6:KNotificationReplyAction::metaObject() const
-libKF6Notifications.so.6:KNotificationReplyAction::placeholderText() const
-libKF6Notifications.so.6:KNotificationReplyAction::fallbackBehavior() const
-libKF6Notifications.so.6:KNotificationReplyAction::submitButtonText() const
-libKF6Notifications.so.6:KNotificationReplyAction::submitButtonIconName() const
-libKF6Notifications.so.6:KNotificationReplyAction::label() const
+libKF6Notifications.so.6:KNotifyConfig::reparseConfiguration()
+libKF6Notifications.so.6:KNotifyConfig::~KNotifyConfig()
